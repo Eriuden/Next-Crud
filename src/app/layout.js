@@ -1,5 +1,9 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Navbar } from './components/Navbar'
+
+/*Comme indique le root, on est ici à la racine du site, la bse même
+En placant ici Navbar, c'est placer les compo présents partout dans app sur react*/ 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <>
+          <div className='3max-w-3xl mx-auto p-4'>
+            <Navbar/>
+            <div className='mt-8'>{children}</div>
+          </div>
+        </>
+      </body>
+        
+        
     </html>
   )
 }
