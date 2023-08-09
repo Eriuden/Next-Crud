@@ -11,3 +11,6 @@ export const connect = async() => {
     }
 }
 
+//Problème très bizarre à résoudre
+//Avec Next, il pointe un bad auth, alors qu'en MERN, tout fonctionne
+//Ce avec un système de connexion BDD identique !
